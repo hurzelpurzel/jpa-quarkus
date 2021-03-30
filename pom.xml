@@ -37,9 +37,9 @@
 			<artifactId>quarkus-hibernate-orm</artifactId>
 		</dependency>
 		<dependency>
-			<groupId>io.quarkus</groupId>
-			<artifactId>quarkus-spring-data-rest</artifactId>
-		</dependency>
+        <groupId>io.quarkus</groupId>
+        <artifactId>quarkus-hibernate-orm-rest-data-panache</artifactId>
+    </dependency>
 		<dependency>
 			<groupId>io.quarkus</groupId>
 			<artifactId>quarkus-hibernate-orm-panache</artifactId>
@@ -70,7 +70,10 @@
 			<artifactId>opencsv</artifactId>
 			<version>5.4</version>
 		</dependency>
-
+		<dependency>
+			<groupId>io.quarkus</groupId>
+			<artifactId>quarkus-smallrye-openapi</artifactId>
+		</dependency>
 
 		<dependency>
 			<groupId>io.quarkus</groupId>
@@ -114,6 +117,7 @@
 					</systemPropertyVariables>
 				</configuration>
 			</plugin>
+
 		</plugins>
 	</build>
 	<profiles>
