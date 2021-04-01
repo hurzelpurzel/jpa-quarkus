@@ -1,12 +1,11 @@
 package de.pottmeier;
 
-import javax.ws.rs.Path;
-
-import io.quarkus.hibernate.orm.rest.data.panache.PanacheEntityResource;
+import io.quarkus.hibernate.orm.rest.data.panache.PanacheRepositoryResource;
 import model.Book;
+import model.BookRepository;
 
 
-@Path("/books-resource")
-public interface BookResource extends PanacheEntityResource<Book, Integer>  {
+
+public interface BookResource extends PanacheRepositoryResource<BookRepository,Book, Integer>  {
 
 }
