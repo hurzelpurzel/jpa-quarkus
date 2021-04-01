@@ -1,9 +1,14 @@
 package model;
 
 import java.io.Serializable;
-import javax.persistence.*;
 
-import io.quarkus.hibernate.orm.panache.PanacheEntity;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.NamedQuery;
+import javax.persistence.Table;
+
+import io.quarkus.hibernate.orm.panache.PanacheEntityBase;
 
 
 /**
@@ -13,7 +18,7 @@ import io.quarkus.hibernate.orm.panache.PanacheEntity;
 @Entity
 @Table(name="books")
 @NamedQuery(name="Book.findAll", query="SELECT b FROM Book b")
-public class Book extends PanacheEntity implements Serializable {
+public class Book extends PanacheEntityBase implements Serializable {
 	private static final long serialVersionUID = 1L;
 
 	@Id
